@@ -6,7 +6,7 @@ import "./main.css";
 
 const Main = () => {
   return (
-    <main>
+    <main className="flex flex-row justify-center items-center h-full">
       <Routes>
         <Route path="/" element={<ChoseElement />} />
         <Route path="/game" element={<Game />} />

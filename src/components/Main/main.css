@@ -1,0 +1,38 @@
+.box__1-image__1 {
+  border-radius: 50%;
+  background-color: #1f53f2;
+  height: 7rem;
+  width: 7rem;
+
+  display: grid;
+  place-items: center;
+}
+.box__1-image__2 {
+  border-radius: 50%;
+  background-color: #df2525;
+  height: 7rem;
+  width: 7rem;
+
+  display: grid;
+  place-items: center;
+}
+.box__2-image__1 {
+  border-radius: 50%;
+  background-color: #e9f656;
+  height: 7rem;
+  width: 7rem;
+
+  display: grid;
+  place-items: center;
+}
+
+.box__2-image__1 div,
+.box__1-image__1 div,
+.box__1-image__2 div {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+
+  display: grid;
+  place-items: center;
+}
