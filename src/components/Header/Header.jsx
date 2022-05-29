@@ -3,7 +3,7 @@ import "./header.css";
 
 const Header = ({ score }) => {
   return (
-    <header className="header w-full flex justify-center h-1/4">
+    <header className="header w-full flex justify-center h-1/4 items-center">
       <div className="header__main flex flex-row justify-between w-3/5 border-2 items-center px-4">
         <ul className="text-white">
           <li>ROCK</li>
