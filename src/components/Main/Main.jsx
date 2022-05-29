@@ -6,7 +6,6 @@ import "./main.css";
 
 const Main = () => {
   const [choice, setChoice] = useState(null);
-  console.log(choice);
   return (
     <main className="flex flex-row justify-center items-center h-full">
       <Routes>

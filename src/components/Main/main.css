@@ -36,3 +36,40 @@
   display: grid;
   place-items: center;
 }
+
+.game-image__1 {
+  border-radius: 50%;
+  background-color: green;
+  height: 7rem;
+  width: 7rem;
+
+  display: grid;
+  place-items: center;
+}
+
+.game-image__1 div {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+
+  display: grid;
+  place-items: center;
+}
+.game-image__2 {
+  border-radius: 50%;
+  background-color: orange;
+  height: 7rem;
+  width: 7rem;
+
+  display: grid;
+  place-items: center;
+}
+
+.game-image__2 div {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+
+  display: grid;
+  place-items: center;
+}
