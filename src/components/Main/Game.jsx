@@ -41,32 +41,32 @@ const Game = ({ choice, setScore, setChoice }) => {
   }
 
   //End Game Logic
-  const gameResult = () => {
-    if (
-      (choice === "rock" && computer === "scissors") ||
-      (choice === "paper" && computer === "rock") ||
-      (choice === "scissors" && computer === "paper")
-    ) {
-      setEndGame("You Won 🎊");
-      setScore((prev) => {
-        return (prev += 1);
-      });
-    } else if (
-      (choice === "scissors" && computer === "rock") ||
-      (choice === "rock" && computer === "paper") ||
-      (choice === "paper" && computer === "scissors")
-    ) {
-      setEndGame("You Lose 😞");
-    } else {
-      setEndGame("Draw");
-    }
-  };
 
   useEffect(() => {
+    const gameResult = () => {
+      if (
+        (choice === "rock" && computer === "scissors") ||
+        (choice === "paper" && computer === "rock") ||
+        (choice === "scissors" && computer === "paper")
+      ) {
+        setEndGame("You Won 🎊");
+        setScore((prev) => {
+          return (prev += 1);
+        });
+      } else if (
+        (choice === "scissors" && computer === "rock") ||
+        (choice === "rock" && computer === "paper") ||
+        (choice === "paper" && computer === "scissors")
+      ) {
+        setEndGame("You Lost 😞");
+      } else {
+        setEndGame("Draw");
+      }
+    };
     setTimeout(() => {
       gameResult();
     }, 1500);
-  }, [computer]);
+  }, [computer, choice, setScore]);
 
   // Play again function
   const playAgainBtn = () => {
