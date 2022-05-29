@@ -7,3 +7,21 @@
   height: 100vh;
   padding: 2rem 0;
 }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100000000000000000;
+}
+
+.modal-img {
+  background-color: #3b1a6d;
+}
