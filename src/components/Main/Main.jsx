@@ -7,7 +7,7 @@ import "./main.css";
 const Main = ({ setScore, setModal }) => {
   const [choice, setChoice] = useState(null);
   return (
-    <main className="flex justify-center items-center h-full flex-col relative">
+    <main className="flex justify-center h-full flex-col">
       <Routes>
         <Route path="/" element={<ChoseElement setChoice={setChoice} />} />
         <Route
@@ -17,12 +17,14 @@ const Main = ({ setScore, setModal }) => {
           }
         />
       </Routes>
-      <button
-        className="bg-white mt-6 px-4 py-1 rounded-md font-semibold absolute right-0 bottom-6"
-        onClick={() => setModal(true)}
-      >
-        Rules
-      </button>
+      <div className="flex items-end justify-end mt-16">
+        <button
+          className="bg-white px-4 py-1 rounded-md font-semibold"
+          onClick={() => setModal(true)}
+        >
+          Rules
+        </button>
+      </div>
     </main>
   );
 };
