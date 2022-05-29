@@ -3,7 +3,7 @@ import scissors from "../../assets/images/icon-scissors.svg";
 import rock from "../../assets/images/icon-rock.svg";
 import paper from "../../assets/images/icon-paper.svg";
 
-const Game = ({ choice }) => {
+const Game = ({ choice, setScore }) => {
   const [endGame, setEndGame] = useState(null);
   const [computer, setComputer] = useState("");
 
@@ -46,6 +46,9 @@ const Game = ({ choice }) => {
       (choice == "scissors" && computer === "paper")
     ) {
       setEndGame("You Won 🎊");
+      setScore((prev) => {
+        return (prev += 1);
+      });
     } else if (
       (choice === "scissors" && computer === "rock") ||
       (choice === "rock" && computer === "paper") ||
