@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
@@ -21,14 +21,14 @@ function App() {
   }, [score]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App flex justify-start flex-col items-center">
         {modal && <Modal setModal={setModal} />}
         <Header score={score} />
         <Main setScore={setScore} setModal={setModal} />
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
