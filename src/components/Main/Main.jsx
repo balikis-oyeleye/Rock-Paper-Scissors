@@ -11,7 +11,7 @@ const Main = () => {
     <main className="flex flex-row justify-center items-center h-full">
       <Routes>
         <Route path="/" element={<ChoseElement setChoice={setChoice} />} />
-        <Route path="/game" element={<Game />} />
+        <Route path="/game" element={<Game choice={choice} />} />
       </Routes>
     </main>
   );

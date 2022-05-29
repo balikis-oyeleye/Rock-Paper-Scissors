@@ -9,8 +9,7 @@ const ChoseElement = ({ setChoice }) => {
 
   const onClick = (event) => {
     setChoice(event.target.id);
-    console.log(event.target.id);
-    // navigate("/game");
+    navigate("/game");
   };
 
   return (
