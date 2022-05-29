@@ -1,12 +1,14 @@
 import { useState } from "react";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 function App() {
   const [score, setScore] = useState(4);
 
   return (
-    <div className="App flex justify-center">
+    <div className="App flex justify-start flex-col items-center">
       <Header score={score} />
+      <Footer />
     </div>
   );
 }
