@@ -44,8 +44,8 @@ const Game = ({ choice, setScore, setChoice }) => {
   const gameResult = () => {
     if (
       (choice === "rock" && computer === "scissors") ||
-      (choice == "paper" && computer === "rock") ||
-      (choice == "scissors" && computer === "paper")
+      (choice === "paper" && computer === "rock") ||
+      (choice === "scissors" && computer === "paper")
     ) {
       setEndGame("You Won 🎊");
       setScore((prev) => {
