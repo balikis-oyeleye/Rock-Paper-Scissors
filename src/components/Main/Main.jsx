@@ -12,7 +12,9 @@ const Main = ({ setScore }) => {
         <Route path="/" element={<ChoseElement setChoice={setChoice} />} />
         <Route
           path="/game"
-          element={<Game choice={choice} setScore={setScore} />}
+          element={
+            <Game choice={choice} setScore={setScore} setChoice={setChoice} />
+          }
         />
       </Routes>
     </main>

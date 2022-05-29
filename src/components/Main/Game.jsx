@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import scissors from "../../assets/images/icon-scissors.svg";
 import rock from "../../assets/images/icon-rock.svg";
 import paper from "../../assets/images/icon-paper.svg";
 
-const Game = ({ choice, setScore }) => {
+const Game = ({ choice, setScore, setChoice }) => {
   const [endGame, setEndGame] = useState(null);
   const [computer, setComputer] = useState("");
+  const navigate = useNavigate();
 
   const computerPick = () => {
     let elementArray = ["rock", "scissors", "paper"];
@@ -66,6 +68,12 @@ const Game = ({ choice, setScore }) => {
     }, 1500);
   }, [computer]);
 
+  // Play again function
+  const playAgainBtn = () => {
+    navigate("/");
+    setChoice(null);
+  };
+
   return (
     <main>
       <div className="flex items-center justify-center gap-20 flex-row">
@@ -95,7 +103,10 @@ const Game = ({ choice, setScore }) => {
       {endGame && (
         <div className="text-center">
           <p className="text-white text-2xl mb-5">{endGame}</p>
-          <button className="bg-white px-4 py-2 rounded-md font-semibold">
+          <button
+            className="bg-white px-4 py-2 rounded-md font-semibold"
+            onClick={playAgainBtn}
+          >
             Play Again
           </button>
         </div>
