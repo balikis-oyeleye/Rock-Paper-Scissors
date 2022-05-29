@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.App {
+  background-color: #3b1a6d;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
